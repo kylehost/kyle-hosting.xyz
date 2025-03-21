@@ -2,9 +2,6 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
  <url>
   <loc>https://kyle-hosting.xyz/</loc>
- </url>
- <url>
-  <loc>https://kyle-hosting.xyz/</loc>
   <changefreq>hourly</changefreq>
   <priority>1.0</priority>
   <lastmod>2025-03-20</lastmod>
