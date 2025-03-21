@@ -135,20 +135,7 @@
                 <textarea name="message" placeholder="Your Message" class="w-full p-3 mb-4 border border-gray-600 rounded" rows="5" required></textarea>
                 <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition duration-300">Send Message</button>
             </form>
-            <script>
-                function sendEmail(event) {
-                    event.preventDefault();
-                    const form = document.getElementById('contact-form');
-                    const formData = new FormData(form);
-                    emailjs.sendForm('LcP9Vbb3Pvk4AOf3F', 'template_tryu37b', formData)
-                        .then((result) => {
-                            alert('Message sent successfully!');
-                            form.reset();
-                        }, (error) => {
-                            alert('Error sending message: ' + error.text);
-                        });
-                }
-            </script>
+            <script src=""></script>
         </div>
     </section>
 
