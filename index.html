@@ -125,19 +125,18 @@
     </div>
 </section>
 
-    <!-- Contact Form Section -->
-    <section id="contact" class="py-20 bg-gray-800">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-10">Contact Us</h2>
-            <form class="max-w-lg mx-auto" id="contact-form" onsubmit="sendEmail(event)">
-                <input type="text" name="name" placeholder="Your Name" class="w-full p-3 mb-4 border border-gray-600 rounded" required>
-                <input type="email" name="email" placeholder="Your Email" class="w-full p-3 mb-4 border border-gray-600 rounded" required>
-                <textarea name="message" placeholder="Your Message" class="w-full p-3 mb-4 border border-gray-600 rounded" rows="5" required></textarea>
-                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition duration-300">Send Message</button>
-            </form>
-            <script src="https://cdn.jsdelivr.net/gh/Hosting-Kyle/hosting-kyle.github.io@main/form.js"></script>
-        </div>
-    </section>
+<!-- Contact Form Section -->
+<section id="contact" class="py-20 bg-gray-800">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-10">Contact Us</h2>
+        <form class="max-w-lg mx-auto" id="contact-form" method="POST" action="https://a9e64768-c7a6-49b0-833f-d1206d7db459.deepnoteproject.com/submit">
+            <input type="text" name="name" placeholder="Your Name" class="w-full p-3 mb-4 border border-gray-600 rounded" required>
+            <input type="email" name="email" placeholder="Your Email" class="w-full p-3 mb-4 border border-gray-600 rounded" required>
+            <textarea name="message" placeholder="Your Message" class="w-full p-3 mb-4 border border-gray-600 rounded" rows="5" required></textarea>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition duration-300">Send Message</button>
+        </form>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="py-6 bg-gray-900 text-white text-center">
