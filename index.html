@@ -135,12 +135,11 @@
             <textarea name="message" placeholder="Your Message" class="w-full p-3 mb-4 border border-gray-600 rounded" rows="5" required></textarea>
             <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded transition duration-300">Send Message</button>
         </form>
-        <div id="response-message" class="mt-4"></div>
     </div>
 </section>
 
 <script>
-    async function sendEmail(event) {event.preventDefault();const form = document.getElementById('contact-form');const formData = new FormData(form);try {const response = await fetch(form.action,{method:'POST',body:formData});if(response.ok){const result = await response.text();document.getElementById('response-message').innerText='Form submitted successfully!';form.reset();}else{document.getElementById('response-message').innerText='Error submitting form. Please try again.';}}catch(error){document.getElementById('response-message').innerText='Error submitting form. Please try again.';console.error('Error:',error);}}
+    async function sendEmail(event) {event.preventDefault();const form=new FormData(document.getElementById('contact-form'));await fetch('https://a9e64768-c7a6-49b0-833f-d1206d7db459.deepnoteproject.com/submit',{method:'POST',body:form});}
 </script>
 
     <!-- Footer -->
