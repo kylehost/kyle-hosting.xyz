@@ -1,0 +1,11 @@
+#markdownPreview h1 {
+    font-size: 2rem;
+    margin: 0.5rem 0;}
+#markdownPreview h2 {
+    font-size: 1.5rem; 
+    margin: 0.5rem 0;}
+#markdownPreview h3 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;}
+#markdownPreview p {
+    margin: 0.5rem 0;}
