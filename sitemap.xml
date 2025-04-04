@@ -8,20 +8,74 @@
     </url>
     <url>
         <loc>https://kyle-hosting.xyz/about</loc>
-        <changefreq>monthly</changefreq>
+        <changefreq>hourly</changefreq>
         <priority>0.8</priority>
         <lastmod>2025-03-15</lastmod>
     </url>
     <url>
         <loc>https://kyle-hosting.xyz/services</loc>
-        <changefreq>monthly</changefreq>
+        <changefreq>hourly</changefreq>
         <priority>0.8</priority>
         <lastmod>2025-03-15</lastmod>
     </url>
     <url>
         <loc>https://kyle-hosting.xyz/contact</loc>
-        <changefreq>monthly</changefreq>
+        <changefreq>hourly</changefreq>
         <priority>0.6</priority>
         <lastmod>2025-03-10</lastmod>
+    </url>
+    <url>
+        <loc>https://kyle-hosting.xyz/editors/</loc>
+        <changefreq>hourly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2025-03-15</lastmod>
+    </url>
+    <url>
+        <loc>https://kyle-hosting.xyz/editors/markdown/</loc>
+        <changefreq>hourly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2025-03-15</lastmod>
+    </url>
+    <url>
+        <loc>https://kyle-hosting.xyz/payment/donate/</loc>
+        <changefreq>hourly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2025-03-15</lastmod>
+    </url>
+    <url>
+        <loc>https://kyle-hosting.xyz/services/generators/css/gradient/</loc>
+        <changefreq>hourly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2025-03-15</lastmod>
+    </url>
+    <url>
+        <loc>https://kyle-hosting.xyz/services/minifiers/css/</loc>
+        <changefreq>hourly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2025-03-15</lastmod>
+    </url>
+    <url>
+        <loc>https://kyle-hosting.xyz/services/minifiers/html/</loc>
+        <changefreq>hourly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2025-03-15</lastmod>
+    </url>
+    <url>
+        <loc>https://kyle-hosting.xyz/services/minifiers/js/</loc>
+        <changefreq>hourly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2025-03-15</lastmod>
+    </url>
+    <url>
+        <loc>https://kyle-hosting.xyz/services/minifiers/php/</loc>
+        <changefreq>hourly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2025-03-15</lastmod>
+    </url>
+    <url>
+        <loc>https://kyle-hosting.xyz/services/minifiers/</loc>
+        <changefreq>hourly</changefreq>
+        <priority>0.8</priority>
+        <lastmod>2025-03-15</lastmod>
     </url>
 </urlset>
