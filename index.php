@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-session_start();
-if (!isset($_SESSION['user_id'])) {
+session_start(); if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
-    exit;
-}
-echo "Welcome, " . htmlspecialchars($_SESSION['username']) . "!";
-?>
+    exit; } echo "Welcome, " . htmlspecialchars($_SESSION['username']) . "!";?>
 <head>
     <script src="https://cdn.jsdelivr.net/npm/appwrite@17.0.1"></script>
     <script>
@@ -20,11 +16,8 @@ echo "Welcome, " . htmlspecialchars($_SESSION['username']) . "!";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://flowbite.com/docs/images/logo.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        * {
-            scroll-behavior: smooth
-        }
-    </style>
+    <style>* {scroll-behavior: smooth}</style>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Kyle's Hosting Service & Devtools</title>
     <meta name="title" content="Kyle's Hosting Services">
     <meta name="description"
