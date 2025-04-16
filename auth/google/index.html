@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google OAuth 2.0 with JavaScript</title>
+    <script src="https://apis.google.com/js/api.js"></script>
+</head>
+<body>
+    <h1>Google OAuth 2.0 Authentication</h1>
+    <button id="login-button">Login with Google</button>
+    <div id="user-info" style="display: none;">
+        <h2>User Info</h2>
+        <pre id="profile"></pre>
+        <button id="logout-button">Logout</button>
+    </div>
+
+    <script>
+        const CLIENT_ID = '1868077188-91ru2n4rqou3i0c70qfq28q5teurjb50.apps.googleusercontent.com'; // Replace with your Client ID
+        const SCOPES = 'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email';
+
+        function handleClientLoad() {
+            gapi.load('client:auth2', initClient);
+        }
+
+        function initClient() {
+            gapi.client.init({
+                clientId: CLIENT_ID,
+                scope: SCOPES
+            }).then(() => {
+                const authInstance = gapi.auth2.getAuthInstance();
+                const isSignedIn = authInstance.isSignedIn.get();
+                updateUI(isSignedIn);
+
+                document.getElementById('login-button').onclick = () => {
+                    authInstance.signIn();
+                };
+
+                document.getElementById('logout-button').onclick = () => {
+                    authInstance.signOut();
+                };
+
+                authInstance.isSignedIn.listen(updateUI);
+            });
+        }
+        
+        function updateUI(isSignedIn) {
+            if (isSignedIn) {
+                document.getElementById('user-info').style.display = 'block';
+                getUser Info();
+            } else {
+                document.getElementById('user-info').style.display = 'none';
+            }
+        }
+
+        function getUser Info() {
+            gapi.client.request({
+                'path': 'https://www.googleapis.com/oauth2/v3/userinfo'
+            }).then(response => {
+                document.getElementById('profile').innerText = JSON.stringify(response.result, null, 2);
+            });}
+        handleClientLoad();
+    </script>
+</body>
+</html>
