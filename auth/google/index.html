@@ -49,13 +49,13 @@
         function updateUI(isSignedIn) {
             if (isSignedIn) {
                 document.getElementById('user-info').style.display = 'block';
-                getUser Info();
+                getUserInfo();
             } else {
                 document.getElementById('user-info').style.display = 'none';
             }
         }
 
-        function getUser Info() {
+        function getUserInfo() {
             gapi.client.request({
                 'path': 'https://www.googleapis.com/oauth2/v3/userinfo'
             }).then(response => {
