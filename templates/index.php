@@ -15,7 +15,7 @@ session_start(); if (!isset($_SESSION['user_id'])) {
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8174455736657903"
         crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://flowbite.com/docs/images/logo.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/logo.jpg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>* {scroll-behavior: smooth}</style>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -213,7 +213,7 @@ session_start(); if (!isset($_SESSION['user_id'])) {
 <!-- Footer Section -->
 <footer class="bg-white rounded-lg shadow-sm fixed bottom-0 left-0 right-0 m-4 dark:bg-gray-800">
     <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://kyle-hosting.xyz/"
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023-2025 <a href="https://kyle-hosting.xyz/"
                 class="hover:underline">Kyle Hosting™</a>. All Rights Reserved.
         </span>
         <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
