@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit;
+}
+echo "Welcome, " . htmlspecialchars($_SESSION['username']) . "!";
+?>
 <head>
     <script src="https://cdn.jsdelivr.net/npm/appwrite@17.0.1"></script>
     <script>
