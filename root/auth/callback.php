@@ -1,11 +1,8 @@
 <?php
 session_start();
 
-// Include configuration file
 require_once 'config.php';
-
-// Include Google API Client Library
-require_once 'vendor/autoload.php'; // Make sure you have installed the Google API Client Library via Composer
+require_once '/vendor/autoload.php';
 
 // Initialize Google Client
 $gClient = new Google_Client();
