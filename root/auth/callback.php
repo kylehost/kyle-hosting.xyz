@@ -56,13 +56,13 @@ if (isset($_SESSION['discord_token'])) {
             'header' => "Authorization: Bearer " . $_SESSION['discord_token'],
         ],
     ]));
-    $discordUser Info = json_decode($userResponse, true);
+    $discordUser_Info = json_decode($userResponse, true);
 
     global $db;
 
-    $discordId = $discordUser Info['id'];
-    $discordEmail = $discordUser Info['email'];
-    $discordName = $discordUser Info['username'];
+    $discordId = $discordUser_Info['id'];
+    $discordEmail = $discordUser_Info['email'];
+    $discordName = $discordUser_Info['username'];
 
     $stmt = $db->prepare("SELECT * FROM users WHERE discord_id = :discord_id");
     $stmt->bindParam(':discord_id', $discordId);
@@ -97,13 +97,13 @@ if (isset($_SESSION['spotify_token'])) {
             'header' => "Authorization: Bearer " . $_SESSION['spotify_token'],
         ],
     ]));
-    $spotifyUser Info = json_decode($userResponse, true);
+    $spotifyUser_Info = json_decode($userResponse, true);
 
     global $db;
 
-    $spotifyId = $spotifyUser Info['id'];
-    $spotifyEmail = $spotifyUser Info['email'];
-    $spotifyName = $spotifyUser Info['display_name'];
+    $spotifyId = $spotifyUser_Info['id'];
+    $spotifyEmail = $spotifyUser_Info['email'];
+    $spotifyName = $spotifyUser_Info['display_name'];
 
     $stmt = $db->prepare("SELECT * FROM users WHERE spotify_id = :spotify_id");
     $stmt->bindParam(':spotify_id', $spotifyId);
