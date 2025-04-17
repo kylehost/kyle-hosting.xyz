@@ -1,4 +1,15 @@
 <?php
+function getClientIP() {
+    if (!empty($_SERVER['HTTP_X_REAL_IP'])) {
+        return $_SERVER['HTTP_X_REAL_IP'];
+    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        return explode(',', $_SERVER['HTTP_X_FORWARDED_FOR'])[0];
+    } else {
+        return $_SERVER['REMOTE_ADDR'];
+    }
+}
+
+$clientIP = getClientIP();
 
 // Google OAuth 2.0 configuration
 define('GOOGLE_CLIENT_ID', '1868077188-91ru2n4rqou3i0c70qfq28q5teurjb50.apps.googleusercontent.com');
