@@ -1,13 +1,7 @@
 <?php
-session_set_cookie_params([
-    'lifetime' => 0,
-    'path' => '/',
-    'domain' => '.kyle-hosting.xyz',
-    'secure' => true,
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-session_start();?>
+session_start();
+require_once 'db.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
