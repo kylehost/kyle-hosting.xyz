@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 session_set_cookie_params([
     'lifetime' => 0,
     'path' => '/',
@@ -7,7 +9,7 @@ session_set_cookie_params([
     'httponly' => true,
     'samesite' => 'Lax'
 ]);
-session_start();
+
 
 $host = 'gateway01.us-west-2.prod.aws.tidbcloud.com';
 $port = '4000';
