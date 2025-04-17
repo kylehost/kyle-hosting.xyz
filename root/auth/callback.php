@@ -1,8 +1,7 @@
 <?php
 session_start();
 
-require_once '../config.php';
-
+require_once 'config.php';
 require_once 'local/db.php';
 
 function handleDiscordCallback() {
