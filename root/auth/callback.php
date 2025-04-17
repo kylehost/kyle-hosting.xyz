@@ -2,7 +2,7 @@
 session_start();
 
 require_once 'config.php';
-require_once '/vendor/autoload.php';
+require_once '../vendor/autoload.php';
 
 // Initialize Google Client
 $gClient = new Google_Client();
