@@ -1,15 +1,5 @@
 <?php
 
-session_set_cookie_params([
-    'lifetime' => 0,
-    'path' => '/',
-    'domain' => '.kyle-hosting.xyz',
-    'secure' => true,
-    'httponly' => true,
-    'samesite' => 'Lax'
-]);
-
-
 $host = 'gateway01.us-west-2.prod.aws.tidbcloud.com';
 $port = '4000';
 $dbname = 'login';
