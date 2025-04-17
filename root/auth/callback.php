@@ -4,6 +4,17 @@ session_start();
 // Include configuration file
 require_once 'config.php';
 
+// Include Google API Client Library
+require_once 'vendor/autoload.php'; // Make sure you have installed the Google API Client Library via Composer
+
+// Initialize Google Client
+$gClient = new Google_Client();
+$gClient->setClientId(GOOGLE_CLIENT_ID);
+$gClient->setClientSecret(GOOGLE_CLIENT_SECRET);
+$gClient->setRedirectUri(GOOGLE_REDIRECT_URL);
+$gClient->addScope("email");
+$gClient->addScope("profile");
+
 // Function to handle Google callback
 function handleGoogleCallback($gClient) {
     if (isset($_GET['code'])) {
@@ -82,7 +93,7 @@ $discordAccessToken = handleDiscordCallback(DISCORD_CLIENT_ID, DISCORD_CLIENT_SE
 
 // Fetch user information from each service
 if ($gClient->getAccessToken()) {
-    $google_oauthV2 = new Google_Oauth2Service($gClient);
+    $google_oauthV2 = new Google_Service_Oauth2($gClient);
     $gProfile = $google_oauthV2->userinfo->get();
     $_SESSION['userData']['google'] = $gProfile;
 }
@@ -105,9 +116,5 @@ if ($discordAccessToken) {
     $_SESSION['userData']['discord'] = json_decode($userInfo);
 }
 
-if (!empty($_SESSION['userData'])) {
-    header("Location: home-page.php");
-} else {
-    echo "Error retrieving user data. Please try again.";
-}
-?>
+header("Location: /index.php");
+exit();
