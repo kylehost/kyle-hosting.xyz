@@ -4,4 +4,4 @@ Disallow: /admin/
 User-agent: *
 Allow: /
 
-Sitemap: https://www.example.com/sitemap.xml
+Sitemap: https://kyle-hosting.xyz/sitemap.xml
